@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+{% block content %}
+    {% block title %} {{ x.name }} {% endblock %}
+    <p> Origin: {{ myproducts.origin }}</p>
+    <p>Orders: {{ myproducts.orders }} </p>
+    <p>Lead_time: {{myproducts.lead_time }} </p>
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body style="background-color: grey">
+<h1> Welcome to our stores </h1>
+{% block content%}
+{% for x in myproducts %}
+    <ul>
+        <li> <a href="details/{{ x.id }}">{{ x.name }}</a> </li>
+    </ul>
+{% endfor %}
+<p> Back <a href="/">home</a></p>
+
+
+{% endblock %}
+
+</body>
+</html>

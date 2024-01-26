@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Message:</strong>{{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+         <span aria-hidden="true"> &times;</span>
+    </button>
+
+</div>
+{% endfor %}
+
+
+
+{% if user.is_authenticated %}
+<h3> Hello {{ fname }} </h3>
+<h4> You're successfully logged in</h4>
+<h5> Welcome to storefront Enterprises</h5>
+<h6> You can view our available items <a href="/products">here</a> </h6>
+<button type="submit"><a href="/signout">Sign_Out</a> </button>
+
+{% else %}
+<button type="submit"><a href="/signup">Sign-Up</a> </button>
+<button type="submit"><a href="/signin">Sign-In</a></button>
+{% endif %}
+</body>
+</html>
